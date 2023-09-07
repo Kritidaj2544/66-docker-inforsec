@@ -1,12 +1,11 @@
 version: '3'
-
 services:
   db:
     image: postgres:latest
     container_name: my-db-docker2
     ports:
       - 54321:5432
-  environment:
+    senvironment:
     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     - POSTGRES_USER=${POSTGRES_USER}
   pg-admin:
@@ -15,10 +14,10 @@ services:
     ports:
       - 4433:443
       - 8080:80
-  environment:
+    environment:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
-    strapi:
+  strapi:
     image: naskio/strapi:latest
     container_name: my-app-docker2
     ports:
