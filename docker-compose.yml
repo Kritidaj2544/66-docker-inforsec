@@ -2,7 +2,7 @@ version: '3'
 services:
   db:
     image: postgres:latest
-    container_name: my-db-docker2
+    container_name: my-db-docker3
     ports:
       - 54321:5432
     senvironment:
