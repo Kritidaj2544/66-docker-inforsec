@@ -19,7 +19,7 @@ services:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
   strapi:
-    image: kritidaj/myapp:1.0
+    image: kritidaj/myapp:2.0
     container_name: my-app-docker
     ports:
       - 1337:1337
