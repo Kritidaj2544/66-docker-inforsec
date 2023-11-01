@@ -19,8 +19,9 @@ services:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
   strapi:
-    image: kritidajdocker/strapi_kritidaj:1.0
-    container_name: my-app-docker
+    image: kritidajdocker/app:latest
+    build: .
+    container_name: my-app
     ports:
       - 1337:1337
     environment:
@@ -31,3 +32,4 @@ services:
       - DATABASE_PORT=${DATABASE_PORT}
       - DATABASE_SSL=false
       - DATABASE_CLIENT=postgres
+      
